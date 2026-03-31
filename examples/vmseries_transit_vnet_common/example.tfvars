@@ -326,7 +326,7 @@ vmseries = {
     vnet_key = "transit"
     image = {
       use_airs = true
-      version  = "<SPECIFY-AIRS-VERSION>" # TODO: Set AIRS version - run: az vm image list --publisher paloaltonetworks --offer airs-flex --sku airs-byol --all
+      version  = "12.1.5" # TODO: Set AIRS version - run: az vm image list --publisher paloaltonetworks --offer airs-flex --sku airs-byol --all
     }
     virtual_machine = {
       zone = 1
@@ -375,7 +375,7 @@ vmseries = {
     vnet_key = "transit"
     image = {
       use_airs = true
-      version  = "<SPECIFY-AIRS-VERSION>" # TODO: Set AIRS version - run: az vm image list --publisher paloaltonetworks --offer airs-flex --sku airs-byol --all
+      version  = "12.1.5" # TODO: Set AIRS version - run: az vm image list --publisher paloaltonetworks --offer airs-flex --sku airs-byol --all
     }
     virtual_machine = {
       zone = 2
