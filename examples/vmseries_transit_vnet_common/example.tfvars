@@ -422,9 +422,10 @@ vmseries = {
 }
 
 # TEST INFRASTRUCTURE
+# Bitnami/WordPress images are deprecated - leaving empty to skip test infrastructure
+# To enable test infrastructure, use an updated VM image (e.g., Canonical Ubuntu + manually install WordPress)
 
-test_infrastructure = {
-  "app1_testenv" = {
+test_infrastructure = {}
     vnets = {
       "app1" = {
         name          = "app1-vnet"
