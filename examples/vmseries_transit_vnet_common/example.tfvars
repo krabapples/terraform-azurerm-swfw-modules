@@ -274,8 +274,9 @@ bootstrap_storages = {
 
 # All options under `vmseries_universal` map can be overwritten on a per-firewall basis under `vmseries` map
 vmseries_universal = {
-  version = "11.1.607"
-  size    = "Standard_DS3_v2"
+  use_airs = true # Set to true to deploy Prisma AIRS instead of VM-Series
+  version  = "<SPECIFY-AIRS-VERSION>" # TODO: Set AIRS version - run: az vm image list --publisher paloaltonetworks --offer airs-flex --sku airs-byol --all
+  size     = "Standard_DS3_v2"
 
   # This example uses basic user-data bootstrap method by default, comment out the map below if you want to use another one
   bootstrap_options = {
@@ -323,6 +324,10 @@ vmseries = {
   "fw-1" = {
     name     = "firewall01"
     vnet_key = "transit"
+    image = {
+      use_airs = true
+      version  = "<SPECIFY-AIRS-VERSION>" # TODO: Set AIRS version - run: az vm image list --publisher paloaltonetworks --offer airs-flex --sku airs-byol --all
+    }
     virtual_machine = {
       zone = 1
     }
@@ -368,6 +373,10 @@ vmseries = {
   "fw-2" = {
     name     = "firewall02"
     vnet_key = "transit"
+    image = {
+      use_airs = true
+      version  = "<SPECIFY-AIRS-VERSION>" # TODO: Set AIRS version - run: az vm image list --publisher paloaltonetworks --offer airs-flex --sku airs-byol --all
+    }
     virtual_machine = {
       zone = 2
     }
